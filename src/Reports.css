@@ -1,0 +1,124 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 260px;
+  padding-top: 20px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.main-container.dark-mode {
+  background-color: #000000; /* Pure black for dark mode */
+}
+
+.report-container {
+  width: 85%;
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-card {
+  background-color: #121212; /* Darker shade for cards */
+  color: #ffffff;
+  border-color: #333333;
+}
+
+/* Summary cards layout for desktop */
+.summary-cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.summary-card {
+  flex: 1;
+  min-width: 0; /* Allows cards to shrink properly */
+}
+
+/* Chart tooltip styling */
+.recharts-tooltip-wrapper {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mobile responsive additions */
+@media (max-width: 992px) {
+  .main-container {
+      margin-left: 0;
+      width: 100%;
+      padding: 15px;
+      flex-direction: column;
+  }
+  
+  .report-container {
+      width: 100%;
+      max-width: 100%;
+  }
+  
+  .summary-cards-container {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  /* Adjust card styles for mobile */
+  .card {
+      backdrop-filter: blur(5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 993px) and (max-width: 1200px) {
+  .main-container {
+      margin-left: 200px;
+      width: calc(100% - 200px);
+  }
+  
+  .report-container {
+      width: 90%;
+  }
+}
+
+/* Dark mode specific styles */
+.dark-mode .recharts-cartesian-grid-horizontal line,
+.dark-mode .recharts-cartesian-grid-vertical line {
+  stroke: #333333; /* Darker grid lines */
+}
+
+.dark-mode .recharts-legend-item-text {
+  fill: #ffffff !important;
+}
+
+/* Additional dark mode elements */
+.dark-mode .card {
+  background-color: #121212;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.dark-mode .recharts-tooltip-wrapper {
+  background-color: #121212 !important;
+  border: 1px solid #333333 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .recharts-default-tooltip {
+  background-color: #121212 !important;
+  border: 1px solid #333333 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .recharts-cartesian-axis-tick-value {
+  fill: #ffffff !important;
+}
+
+.dark-mode .recharts-label {
+  fill: #ffffff !important;
+}

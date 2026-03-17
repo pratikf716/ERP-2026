@@ -1,0 +1,412 @@
+/* invoice-list.css */
+
+/* === Base Styles === */
+.invoice-container {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* === Dark Mode Base === */
+.invoice-container.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-text {
+  color: #e0e0e0 !important;
+}
+
+/* === Header Styles === */
+.invoice-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.dark-mode .invoice-header {
+  border-bottom-color: #333333;
+}
+
+/* === Controls === */
+.invoice-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.invoice-controls input {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .invoice-controls input {
+  background-color: #1e1e1e;
+  border-color: #333333;
+  color: #e0e0e0;
+}
+
+.dark-mode .invoice-controls input::placeholder {
+  color: #a0a0a0;
+}
+
+.dark-mode .invoice-controls .ant-input-prefix {
+  color: #a0a0a0;
+}
+
+/* === Buttons === */
+.dark-export-btn {
+  background-color: #1a3a5a !important;
+  border-color: #1a3a5a !important;
+}
+
+.dark-export-btn:hover {
+  background-color: #142f4a !important;
+}
+
+.dark-add-btn {
+  background-color: #1a4d2e !important;
+  border-color: #1a4d2e !important;
+}
+
+.dark-add-btn:hover {
+  background-color: #143d25 !important;
+}
+
+.dark-delete-btn {
+  background-color: #5a1a1a !important;
+  border-color: #5a1a1a !important;
+}
+
+.dark-delete-btn:hover {
+  background-color: #4a1414 !important;
+}
+
+/* === Table Styles === */
+.dark-table .ant-table {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-table .ant-table-thead > tr > th {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-bottom: 1px solid #333333 !important;
+}
+
+.dark-table .ant-table-tbody > tr > td {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+  border-bottom: 1px solid #333333 !important;
+}
+
+.dark-table .ant-table-tbody > tr:hover > td {
+  background-color: #1e1e1e !important;
+}
+
+.dark-table .ant-table-row-selected > td {
+  background-color: #2a2a2a !important;
+}
+
+.dark-table-text {
+  color: #e0e0e0 !important;
+}
+.anticon anticon-shopping{
+  color: #000 !important;
+}
+/* === Card Styles === */
+.invoice-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-card {
+  background-color: #1e1e1e !important;
+  border-color: #333333 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-card .ant-card-head {
+  color: #e0e0e0 !important;
+  border-bottom-color: #333333 !important;
+}
+
+.dark-card .ant-card-body {
+  color: #e0e0e0 !important;
+}
+
+/* === Dropdown Styles === */
+.dark-dropdown-btn {
+  background-color: #1e1e1e !important;
+  border-color: #333333 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-dropdown-menu {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+}
+
+.dark-menu-item {
+  color: #e0e0e0 !important;
+}
+
+.dark-menu-item:hover {
+  background-color: #333333 !important;
+}
+
+.dark-dropdown-icon {
+  color: #e0e0e0 !important;
+}
+
+/* === Modal Styles === */
+.dark-modal .ant-modal-content {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-modal .ant-modal-header {
+  background-color: #1e1e1e !important;
+  border-bottom-color: #333333 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-modal .ant-modal-title {
+  color: #e0e0e0 !important;
+}
+
+.dark-modal .ant-modal-close-x {
+  color: #e0e0e0 !important;
+}
+
+/* === Product Hover Styles === */
+.product-cell {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.product-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #2a2a3a;
+}
+
+.dark-icon {
+  color: #69c0ff;
+}
+
+.product-count {
+  font-size: 14px;
+}
+
+.product-popover {
+  max-width: 400px;
+}
+
+.dark-popover .ant-popover-inner {
+  background-color: #1e1e1e !important;
+}
+
+.dark-popover .ant-popover-inner-content {
+  color: #e0e0e0 !important;
+}
+
+.product-popover-content {
+  padding: 8px;
+}
+
+.dark-popover {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dark-popover .product-item {
+  border-bottom: 1px solid #333333;
+}
+
+.product-name {
+  margin-right: 12px;
+}
+
+.product-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.dark-button {
+  background-color: #333333 !important;
+  color: #e0e0e0 !important;
+}
+
+.product-link {
+  padding: 0;
+}
+
+.dark-link {
+  color: #69c0ff !important;
+}
+
+/* Dark mode adjustments for the popover */
+.dark-popover .ant-popover-inner {
+  background-color: #1e1e1e;
+}
+
+.dark-popover .ant-popover-title {
+  color: #e0e0e0;
+  border-bottom-color: #333333;
+}
+
+.dark-popover .ant-popover-inner-content {
+  color: #e0e0e0;
+}
+
+/* === Responsive Styles === */
+@media (min-width: 576px) {
+  .invoice-container {
+    padding: 20px;
+  }
+  
+  .invoice-controls {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .invoice-controls input {
+    width: 200px;
+  }
+  
+  .button-group {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .invoice-container {
+    padding: 24px;
+    margin-left: 200px;
+  }
+  
+  .invoice-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .invoice-controls {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+  
+  .button-group {
+    margin-left: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .invoice-container {
+    margin-left: 260px;
+  }
+}
+
+/* === Mobile List Styles === */
+.mobile-invoice-list {
+  margin-top: 16px;
+}
+
+/* Mobile field styles */
+.mobile-field {
+  margin-bottom: 8px;
+}
+
+.field-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #8c8c8c;
+  margin-bottom: 2px;
+}
+
+.dark-mode .field-label {
+  color: #bfbfbf;
+}
+
+.field-value {
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.dark-mode .field-value {
+  color: #e0e0e0;
+}
+
+/* === Pagination Styles === */
+.dark-table .ant-pagination-item {
+  background-color: #1e1e1e !important;
+  border-color: #333333 !important;
+}
+
+.dark-table .ant-pagination-item a {
+  color: #e0e0e0 !important;
+}
+
+.dark-table .ant-pagination-item-active {
+  background-color: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+.dark-table .ant-pagination-item-active a {
+  color: white !important;
+}
+
+.dark-table .ant-pagination-prev .ant-pagination-item-link,
+.dark-table .ant-pagination-next .ant-pagination-item-link {
+  background-color: #1e1e1e !important;
+  border-color: #333333 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 576px) {
+  .invoice-container {
+    padding: 8px;
+  }
+  
+  .button-group .ant-btn {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .button-group .ant-btn-span {
+    display: none;
+  }
+}

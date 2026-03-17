@@ -1,0 +1,578 @@
+/* AdminList.css */
+
+/* Base styles */
+.admin-container {
+  margin-left: 250px; /* Adjust this value based on your sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode styles */
+.admin-container:not(.dark-mode) {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* Dark mode styles */
+.admin-container.dark-mode {
+  background-color: #000000; /* Pure black for dark mode */
+  color: #ffffff;
+}
+
+/* Desktop specific styles */
+.desktop-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.desktop-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar {
+  width: 250px;
+}
+
+.logout-btn {
+  white-space: nowrap;
+  color: #000;
+  
+}
+
+/* Table styles */
+.ant-table {
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+/* Light mode table */
+.admin-container:not(.dark-mode) .ant-table {
+  background-color: #ffffff;
+}
+
+.admin-container:not(.dark-mode) .ant-table-thead > tr > th {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.admin-container:not(.dark-mode) .ant-table-tbody > tr > td {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* Dark mode table */
+.admin-container.dark-mode .ant-table {
+  background-color: #121212; /* Slightly lighter than pure black for contrast */
+}
+
+.admin-container.dark-mode .ant-table-thead > tr > th {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-bottom-color: #333;
+}
+
+.admin-container.dark-mode .ant-table-tbody > tr > td {
+  background-color: #121212;
+  color: #ffffff;
+  border-bottom-color: #333;
+}
+
+.admin-container.dark-mode .ant-table-tbody > tr:hover > td {
+  background-color: #1e1e1e;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .admin-container {
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  .mobile-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mobile-search {
+    width: 100%;
+  }
+  
+  .mobile-logout-btn {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+  
+  .mobile-table .ant-table-content {
+    overflow-x: auto;
+  }
+  
+  .mobile-admin-card {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Light mode mobile card */
+  .admin-container:not(.dark-mode) .mobile-admin-card {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  /* Dark mode mobile card */
+  .admin-container.dark-mode .mobile-admin-card {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .mobile-admin-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .mobile-label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .mobile-admin-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .ant-table-cell {
+    padding: 8px !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* Dark mode text colors */
+.dark-mode .dark-text {
+  color: #ffffff !important;
+}
+
+/* Dark mode checkbox */
+.dark-mode .dark-checkbox .ant-checkbox-inner {
+  background-color: #333;
+  border-color: #555;
+}
+
+.dark-mode .dark-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1890ff;
+}
+
+/* Dark mode action button */
+.dark-mode .dark-action-btn {
+  color: #ffffff;
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+/* Dark mode logout button */
+.dark-mode .dark-logout-btn {
+  background-color: #d33;
+  border-color: #d33;
+   color: #e30909;
+}
+
+/* Dark mode divider */
+.dark-mode .ant-divider {
+  background-color: #333;
+}
+
+/* Smooth transitions for all elements */
+.ant-table,
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.mobile-admin-card,
+.admin-container,
+.dark-checkbox .ant-checkbox-inner,
+.dark-action-btn,
+.dark-logout-btn {
+  transition: all 0.3s ease;
+}
+
+/* Base styles */
+.admin-container {
+  padding: 20px;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Header styles */
+.desktop-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dark-text {
+  color: #ffffff;
+}
+
+/* Table styles */
+.dark-table .ant-table {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark-table .ant-table-thead > tr > th {
+  background-color: #333;
+  color: #ffffff;
+  border-bottom: 1px solid #444;
+}
+
+.dark-table .ant-table-tbody > tr > td {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-bottom: 1px solid #444;
+}
+
+.dark-table .ant-table-tbody > tr:nth-child(even) > td {
+  background-color: #252525;
+}
+
+.dark-table .ant-table-tbody > tr:hover > td {
+  background-color: #3a3a3a;
+}
+
+/* Mobile card styles */
+.mobile-admin-card {
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mobile-card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.mobile-admin-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.mobile-label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Button styles */
+.logout-btn {
+  margin-left: 10px;
+}
+
+.dark-logout-btn {
+  background-color: #d33;
+  border-color: #d33;
+}
+
+.dark-action-btn {
+  background-color: #3a5a78;
+  border-color: #3a5a78;
+}
+
+/* Modal styles */
+.dark-modal .ant-modal-content {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.dark-modal .ant-modal-header {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-bottom: 1px solid #444;
+}
+
+.dark-modal .ant-modal-footer {
+  border-top: 1px solid #444;
+  background-color: #2d2d2d;
+}
+
+/* Input styles */
+.dark-input {
+  background-color: #333;
+  border-color: #444;
+  color: #ffffff;
+}
+
+.dark-input::placeholder {
+  color: #aaa;
+}
+
+.dark-select .ant-select-selector {
+  background-color: #333 !important;
+  border-color: #444 !important;
+  color: #ffffff !important;
+}
+
+.dark-select .ant-select-arrow {
+  color: #ffffff;
+}
+
+/* Checkbox styles */
+.dark-checkbox .ant-checkbox-inner {
+  background-color: #333;
+  border-color: #444;
+}
+
+.dark-checkbox.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #3a5a78;
+  border-color: #3a5a78;
+}
+
+/* Loading and no user states */
+.loading-container, .no-user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loading-container.dark-mode, .no-user-container.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* AdminList.css - Light Mode Logout Button Addition */
+
+/* Light mode logout button styles */
+.light-logout-button {
+  background-color: white !important;
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+}
+
+.light-logout-button:hover {
+  background-color: #fff2f0 !important;
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+}
+
+.light-logout-button:focus {
+  background-color: white !important;
+  border-color: #ff4d4f !important;
+  color: #ff4d4f !important;
+}
+
+/* Dark mode base styles */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-text {
+  color: #e0e0e0 !important;
+}
+
+/* Card styles */
+.dark-card {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+}
+
+.dark-card .ant-card-head {
+  border-bottom: 1px solid #333 !important;
+}
+
+.dark-card .ant-card-head-title {
+  color: #e0e0e0 !important;
+}
+
+/* Table styles */
+.dark-table {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-table .ant-table {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-table .ant-table-thead > tr > th {
+  background-color: #2d2d2d !important;
+  border-bottom: 1px solid #333 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #333 !important;
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-table .ant-table-tbody > tr:hover > td {
+  background-color: #2d2d2d !important;
+}
+
+.dark-table-header {
+  color: #e0e0e0 !important;
+}
+
+/* Button styles */
+.dark-button {
+  background-color: #2d2d2d !important;
+  border-color: #444 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-button:hover {
+  background-color: #3d3d3d !important;
+  border-color: #555 !important;
+}
+
+.dark-logout-button {
+  background-color: #d33 !important;
+  border-color: #d33 !important;
+  color: white !important;
+}
+
+.dark-logout-button:hover {
+  background-color: #b32b2b !important;
+  border-color: #b32b2b !important;
+}
+
+/* Tag styles */
+.dark-tag {
+  background-color: #2d2d2d !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #444 !important;
+}
+
+/* Checkbox styles */
+.dark-checkbox .ant-checkbox-inner {
+  background-color: #2d2d2d !important;
+  border-color: #444 !important;
+}
+
+.dark-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+/* Icon styles */
+.dark-icon {
+  color: #e0e0e0 !important;
+}
+
+/* Container styles */
+.loading-container.dark-mode,
+.no-user-container.dark-mode,
+.admin-container.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Add these to your existing AdminList.css */
+
+/* Base styles for light mode */
+.admin-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.loading-container,
+.no-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.no-user-container h2,
+.no-user-container p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-card-head-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ant-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #fafafa;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 16px;
+}
+
+.ant-tag {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.ant-btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-checkbox-inner {
+  border-radius: 4px;
+}
+
+.ant-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 10px;
+  }
+  
+  .ant-card {
+    margin: 0;
+  }
+  
+  .ant-table {
+    font-size: 14px;
+  }
+  
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 12px 8px;
+  }
+}
