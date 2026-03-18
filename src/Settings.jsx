@@ -220,6 +220,9 @@ const AdminList = () => {
           />
         )}
       </Card>
+      <div className="Last">
+        Made with ❤️ By Pratik
+      </div>
     </div>
   );
 };
